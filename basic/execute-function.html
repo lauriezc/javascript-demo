@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>execute function in javascript</title>
+</head>
+<body>execute function in javascript.
+</body>
+</html>
+<script>
+var test = function() {
+        function fn1(a) {
+                    console.log('fn1');
+                        }
+        fn1(123);
+            this.method1 = function(a) {
+                        console.log('method1');
+                            }
+}
+test.prototype.method2 = function(a) {
+        console.log('method2');
+}
+function fn2(a) {
+        console.log('fn2');
+}
+var obj = new test();
+obj.method1(123);
+obj.method2(123);
+fn2(123);
+obj.fn1(1);
+</script>
